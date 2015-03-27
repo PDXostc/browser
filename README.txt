@@ -42,3 +42,7 @@ KnownIssues:
 	Some sites load vertically centered when they should not. Trac #174
 	The browser may not be sandboxed from the pages it loads. Trac #81, #185
 	Various website loading issues due to Iframe incompatibility. Trac #79, #80, #107
+	Not able to track urls from links
+	Refresh button doesn't seem to reload page
+	Browser will open six tabs without notifying the user when they have opened to many
+	Not able to open a link in a new tab.
