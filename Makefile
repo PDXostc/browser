@@ -73,7 +73,7 @@ wgtPkg: common
 
 clean:
 	rm -rf js/services
-	rm -rf common
+	rm -rf DNA_common
 	rm -rf css/car
 	rm -rf css/user
 	rm -f $(PROJECT).wgt
@@ -87,6 +87,7 @@ common: /opt/usr/apps/common-apps
 
 dev-common: ../common-app
 	cp -rf ../common-app ./DNA_common
+	rm -rf DNA_common/.git
 
 ../common-app:
 	#@echo "Please checkout Common Assets"
