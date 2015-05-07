@@ -38,7 +38,7 @@ function Tab(id, url) {
 			that.activate();
 		}
 	});
-	this.tabView.find('.closeTabBtn').on('click', function() {
+	this.tabView.find('.close-button').on('click', function() {
 		that.close();
 	});
 
@@ -369,8 +369,8 @@ Tab.prototype.changeUrl = function(url, keepContent) {
 Tab.prototype.deactivate = function() {
 	"use strict";
 	this.contentView.css('display', 'none');
-	this.tabView.removeClass('active browserBgColorThemeTransparent');
-	this.tabView.find('.closeTabBtn').removeAttr('style');
+	this.tabView.removeClass('active highlight');
+	this.tabView.find('.close-button').removeAttr('style');
 	this.active = false;
 };
 
@@ -392,9 +392,9 @@ Tab.prototype.activate = function() {
 		}
 	}
 	this.contentView.css('display', 'block');
-	this.tabView.addClass('active browserBgColorThemeTransparent');
+	this.tabView.addClass('active highlight');
 	if (TabController.tabs.length > 1) {
-		this.tabView.find('.closeTabBtn').css('display', 'block');
+		this.tabView.find('.close-button').css('display', 'block');
 	}
 	TabController.calculateTabMaxWidth();
 	this.active = true;

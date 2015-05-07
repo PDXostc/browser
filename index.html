@@ -26,11 +26,11 @@
   <body>
     <template id="tabTemplate">
       <div class="tabIcon"></div>
-      <div class="text fontWeightBold"></div>
-      <div class="closeTabBtn fontSizeXLarge"></div>
+      <div class="text"><strong></strong></div>
+      <h4 class="close-button"></h4>
     </template>
     <template id="tabCtlTemplate">
-      <div id="tab_000000" class="tab boxShadowInset"></div>
+      <div id="tab_000000" class="tab ellipsis-one-line box-infill box-infill-blue"></div>
     </template>
     <template id="tabFrameTemplate">
       <iframe id="content_000000" name="content_000000" class="jlrIFrame" sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts"></iframe>
@@ -40,48 +40,47 @@
       <div id="app">
         <div class="wrapper">
           <div class="browserBody">
-            <div class="browserToolbar bgColorDark">
-              <div id="back" class="browserButton backButtonBrowser">
-                <div class="iconBackBrowser iconBrowser"></div>
-                <div class="boxShadowInset browserButton browserButtonOpacity"></div>
-                <div class="bgColorDarkTransparent browserButton disableBox"></div>
+            <div class="browserToolbar">
+              <div id="back" class="box-infill box-infill-blue browserButton browserButtonOpacity">
+                <div class="iconBackBrowser"></div>
+                <div class="browserButton disableBox"></div>
               </div>
-              <div id="forward" class="browserButton forwardButtonBrowser">
-                <div class="iconForwardBrowser iconBrowser"></div>
-                <div class="boxShadowInset browserButton browserButtonOpacity"></div>
-                <div class="bgColorDarkTransparent browserButton disableBox"></div>
-              </div>
-              <div id="reload" class="browserButton reloadButtonBrowser">
-                <div class="iconReloadBrowser"></div>
+
+              <div id="forward" class="box-infill box-infill-blue browserButton browserButtonOpacity">
+                <div class="iconForwardBrowser"></div>
+                <div class="browserButton disableBox"></div>
               </div>
               <div class="inputBrowserBox">
-                <input id="inputBrowser" type="text" data-bind="value: inputValue, valueUpdate: ['afterkeydown' , 'blur']" class="inputBrowser fontSizeSmaller fontSizeBold fontColorDimmedLight boxShadow4 boxShadow4Active" />
-                <div id="searchButton" class="searchButtonBrowser bgColorDark">
-                  <div class="iconSearchBrowser">GO</div>
+                <input id="inputBrowser" type="text" data-bind="value: inputValue, valueUpdate: ['afterkeydown' , 'blur']" class="inputBrowser text-input">
+                <div id="searchButton">
+                  <h3 class="iconSearchBrowser"><strong>GO</strong></h3>
                 </div>
-                <div id="historyBox" class="historyBox bgColorDark historyBoxHidden">
-                  <div class="historyBoxShadow browserButtonOpacity boxShadowInset"></div>
+                <div id="historyBox" class="historyBox historyBoxHidden">
+                  <div class="historyBoxShadow browserButtonOpacity box-infill box-infill-blue"></div>
                   <div class="historyBoxData" data-bind="foreach: filteredItemsUnique">
                     <div class="historyBoxElementBackground" data-bind="event: { touchstart: $parent.clickOnBrowserHistory }">
-                      <div class="historyBoxElementDevider browserBgColorThemeTransparent "></div>
-                      <div class="historyBoxElement fontWeightBold fontSizeXSmall fontColorDimmedLight oneLineEllipsis" data-bind="text: $data"></div>
+                      <div class="historyBoxElementDevider"></div>
+                      <p class="historyBoxElement small grey ellipsis-one-line" data-bind="text: $data"><strong></strong></p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div id="home" class="browserButton homeButtonBrowser">
+              <div id="reload">
+                <i class="fa fa-repeat fa-3x"></i>
+              </div>
+              <div id="home">
                 <div class="iconHomeBrowser"></div>
               </div>
               <div id="onLineIndicator" class="onLineIndicator onLineIndicatorTrue"></div>
             </div>
-            <div id="tabBar" class="tabBar bgColorDark fontSizeXSmall fontColorNormal">
-              <div id="addTabBtn" class="addTabBtn boxShadowInset">+</div>
+            <div id="tabBar" class="tabBar grey">
+              <div id="addTabBtn" class="addTabBtn box-infill box-infill-blue">+</div>
             </div>
             <!--<div id="actionBlocker" class="actionBlocker">
 							<div class="actionBlockerBg pageBgColorNormalTransparent">
-								<div class="actionBlockerText fontSizeLarger fontWeightBold fontColorNormal">
-									LOADING
-									<div id="loadingDots" class="loadingDots"></div>
+								<div class="actionBlockerText text-large grey">
+                  <strong>LOADING</strong>
+                  <div id="loadingDots" class="loadingDots"></div>
 								</div>
 							</div>
 						</div>-->

@@ -1,6 +1,5 @@
-<div
-	class="propertyDetail fontSizeSmall fontColorNormal textBgColorNormalTransparent">
-	<div class="marginBtm20 fontSizeLarge fontColorTheme">{{:name}}</div>
+<div class="propertyDetail fontSizeSmall grey textBgColorNormalTransparent">
+	<p class="marginBtm20 fontColorTheme">{{:name}}</p>
 	<table class="marginBtm20" style="width: 100%;">
 		<tr>
 			<td>Source</td>
@@ -10,58 +9,54 @@
 		<tr>
 			<td>
 				<div class="inputBox">
-					<input id="propertySourceInput"
-						class="fontSizeSmall input fontSizeBold fontColorNormal boxShadow4 boxShadow4Active userSelectable"
-						type="text" size="10" value="vcan0" />
+					<input id="propertySourceInput"	class="text-input grey userSelectable" type="text" size="10" value="vcan0" />
 				</div>
 			</td>
 			<td>
 				<div class="inputBox">
-					<input id="propertyValueInput"
-						class="fontSizeSmall input fontSizeBold fontColorNormal boxShadow4 boxShadow4Active userSelectable"
-						type="text" placeholder="new value" />
+					<input id="propertyValueInput" class="text-input grey userSelectable"	type="text" placeholder="new value" />
 				</div>
 			</td>
 			<td>
 				<table id="propertyZonesContainer" class="zonesContainer">
 					<tr>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="0">N</td>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="8">L</td>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="32">C</td>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="4">Ri</td>
 					</tr>
 					<tr>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="1">F</td>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="9"></td>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="33"></td>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="5"></td>
 					</tr>
 					<tr>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="2">M</td>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="10"></td>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="34"></td>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="6"></td>
 					</tr>
 					<tr>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="16">Re</td>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="24"></td>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="48"></td>
-						<td class="zone browserBgColorThemeTransparent boxShadowInset"
+						<td class="zone box-infill box-infill-blue"
 							data-value="20"></td>
 					</tr>
 				</table>
@@ -70,37 +65,25 @@
 		<tr>
 			<td></td>
 			<td></td>
-			<td><span class="fontSizeSmaller"><b class="fontColorTheme">N</b>one, <b
-					class="fontColorTheme">L</b>eft, <b class="fontColorTheme">C</b>enter,
-					<b class="fontColorTheme">Ri</b>ght, <b class="fontColorTheme">F</b>ront,
-					<b class="fontColorTheme">M</b>iddle, <b class="fontColorTheme">Re</b>ar
+			<td><span class="small"><strong>N</strong>one, 
+			<strong>L</strong>eft, <strong>C</strong>enter,
+					<strong>Ri</strong>ght, <strong>F</strong>ront,
+					<strong>M</strong>iddle, <strong>Re</strong>ar
 			</span></td>
 		</tr>
 	</table>
 	<div style="width: 100%;">
-		<div class="fontColorNormal fontSizeSmall fontColorTheme marginBtm20">Generated
-			signal:</div>
-		<div id="signalText"
-			class="fontColorNormal fontSizeSmaller marginBtm20">
-			Simulator.set( <span id="source"></span>, <span id="property"></span>,
-			<span id="value">0</span>, <span id="zone">0</span>);
-		</div>
+		<p class="grey small">Generated	signal:</p>
+		<p id="signalText" class="grey small">Simulator.set( <span id="source"></span>, 
+		<span id="property"></span>, <span id="value">0</span>, <span id="zone">0</span>);</p>
 		<div class="button propertyDetailTwoBtnWrapper">
-			<div id="addScriptBtn" class="button propertyDetailBtn"
-				style="right: 0;">
-				<div
-					class="browserBgColorThemeTransparent boxShadowInset button buttonOpacity">
-				</div>
-				<div
-					class="buttonText fontColorNormal fontSizeSmaller fontWeightBold">Add
-					script</div>
+			<div id="addScriptBtn" class="button propertyDetailBtn"	style="right: 0;">
+				<div class="box-infill box-infill-blue button buttonOpacity"></div>
+				<p class="buttonText grey fontSizeSmaller"><strong>Add script</strong></p>
 			</div>
 			<div id="backBtn" class="button propertyDetailBtn">
-				<div
-					class="browserBgColorThemeTransparent boxShadowInset button buttonOpacity">
-				</div>
-				<div
-					class="buttonText fontColorNormal fontSizeSmaller fontWeightBold">Back</div>
+				<div class="box-infill box-infill-blue button buttonOpacity"></div>
+				<p class="buttonText grey small"><strong>Back</strong></p>
 			</div>
 		</div>
 	</div>
